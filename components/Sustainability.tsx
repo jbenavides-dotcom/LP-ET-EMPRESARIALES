@@ -14,7 +14,7 @@ const Sustainability: React.FC = () => {
       <div ref={reveal.ref} className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
           <div>
-            <h4 className="text-white/60 text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">Sostenibilidad</h4>
+            <span className="text-white/60 text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Sostenibilidad</span>
             <h2 className="text-3xl sm:text-4xl font-serif mb-4 sm:mb-6 leading-tight">
               Tu evento también puede <br className="hidden sm:block" /><span className="italic text-brand-beige">generar impacto positivo</span>
             </h2>

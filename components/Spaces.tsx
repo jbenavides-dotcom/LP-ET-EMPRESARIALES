@@ -32,7 +32,7 @@ const Spaces: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">Infraestructura</h4>
+            <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Infraestructura</span>
             <h2 className="text-3xl sm:text-4xl font-serif text-brand-dark mb-4 sm:mb-6 leading-tight">
               Infraestructura pensada para <br className="hidden sm:block" /><span className="italic text-brand-pink">reuniones productivas</span>
             </h2>

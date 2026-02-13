@@ -23,7 +23,7 @@ const WhySection: React.FC = () => {
 
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 relative z-10 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">¿Por qué elegirnos?</h4>
+          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">¿Por qué elegirnos?</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un lugar para reunirse</h2>
           <p className="text-neutral-500 font-light text-base sm:text-lg">Es un entorno que transforma la forma en que tu equipo piensa, colabora y se conecta.</p>
         </div>
