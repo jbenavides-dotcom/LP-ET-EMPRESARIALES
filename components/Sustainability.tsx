@@ -7,7 +7,7 @@ const Sustainability: React.FC = () => {
   const reveal = useScrollReveal();
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-brand-green text-white overflow-hidden relative">
+    <section className="py-12 sm:py-16 lg:py-20 bg-brand-green text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10">
         <img src={ASSETS.CAFETALES} alt="" role="presentation" className="w-full h-full object-cover" loading="lazy" />
       </div>

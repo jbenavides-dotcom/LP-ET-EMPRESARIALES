@@ -8,7 +8,7 @@ const ExperienceJourney: React.FC = () => {
   const stepsReveal = useScrollReveal();
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-brand-light">
+    <section className="py-12 sm:py-16 lg:py-20 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div ref={headerReveal.ref} className={`text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20 ${headerReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">La Experiencia</h4>

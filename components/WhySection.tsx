@@ -17,7 +17,7 @@ const WhySection: React.FC = () => {
   const reveal = useScrollReveal();
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-brand-light relative overflow-hidden">
+    <section className="py-12 sm:py-16 lg:py-20 bg-brand-light relative overflow-hidden">
       <div className="absolute top-0 left-0 w-64 h-64 bg-brand-pink/5 blur-[120px] rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-gold/5 blur-[120px] rounded-full"></div>
 

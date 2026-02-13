@@ -8,7 +8,7 @@ const LocationSection: React.FC = () => {
   const reveal = useScrollReveal();
 
   return (
-    <section id="location" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
+    <section id="location" className="py-12 sm:py-16 lg:py-20 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div ref={reveal.ref} className={`bg-brand-dark rounded-2xl sm:rounded-[2.5rem] lg:rounded-[4rem] p-6 sm:p-10 lg:p-16 xl:p-24 text-white overflow-hidden relative ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <div className="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-brand-pink/10 blur-[100px] rounded-full"></div>

@@ -17,7 +17,7 @@ const Spaces: React.FC = () => {
   const reveal = useScrollReveal();
 
   return (
-    <section id="spaces" className="py-16 sm:py-24 lg:py-32 bg-white">
+    <section id="spaces" className="py-12 sm:py-16 lg:py-20 bg-white">
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <div className="relative">

@@ -30,7 +30,7 @@ const App: React.FC = () => {
         <LocationSection />
 
         {/* CTA Final */}
-        <section className="relative py-20 sm:py-28 lg:py-40 overflow-hidden bg-brand-dark">
+        <section className="relative py-16 sm:py-20 lg:py-28 overflow-hidden bg-brand-dark">
           <div className="absolute inset-0 z-0">
             <img
               src={ASSETS.HERO_BG}

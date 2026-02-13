@@ -7,7 +7,7 @@ const EventTypes: React.FC = () => {
   const reveal = useScrollReveal();
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div ref={reveal.ref} className={`max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Tu evento, a tu medida</h2>
