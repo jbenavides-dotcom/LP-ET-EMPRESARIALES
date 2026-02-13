@@ -7,7 +7,7 @@ import EventTypes from './components/EventTypes';
 import ExperienceJourney from './components/ExperienceJourney';
 import Spaces from './components/Spaces';
 import Activities from './components/Activities';
-import Clients from './components/Clients';
+
 import Sustainability from './components/Sustainability';
 import LocationSection from './components/LocationSection';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO } from './constants';
@@ -25,7 +25,7 @@ const App: React.FC = () => {
         <Spaces />
         <ExperienceJourney />
         <Activities />
-        <Clients />
+
         <Sustainability />
         <LocationSection />
 
@@ -135,7 +135,7 @@ const App: React.FC = () => {
         href={BOOKING_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60] w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:bg-[#128C7E] active:scale-95 transition-all duration-300"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60] w-14 h-14 sm:w-16 sm:h-16 bg-brand-pink text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:bg-brand-pink/70 active:scale-95 transition-all duration-300"
         aria-label="Cotizar evento por WhatsApp"
       >
         <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
