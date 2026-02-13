@@ -21,7 +21,7 @@ const CDN_NEW = "https://res.cloudinary.com/dkqocgknd/image/upload/f_auto,q_auto
 
 export const ASSETS = {
   HERO_BG: "https://res.cloudinary.com/dsylu9a7k/image/upload/f_auto,q_auto,w_1600/lpet/hero-aerial.png",
-  EVENTOS: `${CDN_OLD}/lpet/eventos.png`,
+  EVENTOS: "https://res.cloudinary.com/dsylu9a7k/image/upload/f_auto,q_auto,w_1920/lpet/eventos.png",
   CAFETALES: `${CDN_OLD}/lpet/cafetales.png`,
   DEGUSTACION_CAFE: `${CDN_OLD}/lpet/degustacion-cafe.png`,
   COMIDA: `${CDN_OLD}/lpet/comida-farm-to-table.png`,
