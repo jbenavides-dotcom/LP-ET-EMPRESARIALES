@@ -37,6 +37,8 @@ const App: React.FC = () => {
               className="w-full h-full object-cover opacity-30"
               alt="Reserva tu evento empresarial en La Palma & El Tucán"
               loading="lazy"
+              width="1600"
+              height="900"
             />
             <div className="absolute inset-0 bg-brand-pink/20 mix-blend-multiply"></div>
           </div>
