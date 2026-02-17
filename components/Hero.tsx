@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-4 sm:mb-6 leading-[1.15] text-white">
-            Eventos empresariales que <br className="hidden sm:block" /><span className="italic text-brand-beige">fortalecen equipos y decisiones</span>
+            Eventos empresariales <br className="hidden sm:block" /><span className="italic text-brand-beige">que fortalecen equipos y decisiones</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl font-light leading-relaxed">
@@ -62,16 +62,13 @@ const Hero: React.FC = () => {
             </a>
 
             <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 text-white/80 px-4 sm:px-6 py-3 sm:py-4 glass-morphism rounded-xl">
-              <span className="text-xs uppercase tracking-widest font-medium">20 cabañas privadas entre cafetales</span>
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink" />
+              <span className="text-xs uppercase tracking-widest font-medium">Zipacón, Cundinamarca</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-4 text-white/40 animate-bounce">
-        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Scroll</span>
-        <div className="w-px h-8 sm:h-10 bg-white/20"></div>
-      </div>
     </section>
   );
 };
