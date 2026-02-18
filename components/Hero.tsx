@@ -2,6 +2,7 @@
 import React from 'react';
 import { BOOKING_URL, ASSETS } from '../constants';
 import { ArrowRight, MapPin, Users, MessageCircle } from 'lucide-react';
+import { trackWhatsAppClick } from '../hooks/useAnalytics';
 
 const Hero: React.FC = () => {
   return (
@@ -55,6 +56,7 @@ const Hero: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-pink text-white px-6 sm:px-8 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 hover:bg-brand-pink/70 transition-all shadow-2xl rounded-lg active:scale-95"
+              onClick={() => trackWhatsAppClick('hero_cta')}
             >
               <MessageCircle className="w-5 h-5" />
               Cotizar Mi Evento Empresarial

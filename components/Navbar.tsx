@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { NAV_LINKS, BOOKING_URL } from '../constants';
+import { trackWhatsAppClick } from '../hooks/useAnalytics';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,7 @@ const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 bg-brand-pink hover:bg-brand-pink/70 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
             aria-label="Cotizar evento por WhatsApp"
+            onClick={() => trackWhatsAppClick('navbar_desktop')}
           >
             <MessageCircle className="w-4 h-4" />
             Cotizar Evento
@@ -82,7 +84,7 @@ const Navbar: React.FC = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
+            onClick={() => { trackWhatsAppClick('navbar_mobile'); setIsOpen(false); }}
             className="bg-brand-pink hover:bg-brand-pink/70 text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2 w-full"
           >
             <MessageCircle className="w-5 h-5" />
