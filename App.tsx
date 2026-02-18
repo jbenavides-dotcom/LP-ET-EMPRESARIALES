@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhySection from './components/WhySection';
@@ -12,9 +12,10 @@ import Sustainability from './components/Sustainability';
 import LocationSection from './components/LocationSection';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
-import { trackWhatsAppClick, trackEmailClick, trackPhoneClick, trackSocialClick } from './hooks/useAnalytics';
+import { trackWhatsAppClick, trackEmailClick, trackPhoneClick, trackSocialClick, initScrollTracking } from './hooks/useAnalytics';
 
 const App: React.FC = () => {
+  useEffect(() => { initScrollTracking(); }, []);
   return (
     <div className="min-h-screen bg-brand-light selection:bg-brand-pink selection:text-white">
       <Navbar />
