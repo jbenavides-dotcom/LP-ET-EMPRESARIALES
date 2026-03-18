@@ -2,9 +2,18 @@
 import React from 'react';
 import { SUSTAINABILITY_STATS, ASSETS } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useI18n, TranslationKey } from '../i18n';
+
+const STAT_LABEL_KEYS: TranslationKey[] = [
+  'sustain_stat_1_label',
+  'sustain_stat_2_label',
+  'sustain_stat_3_label',
+  'sustain_stat_4_label',
+];
 
 const Sustainability: React.FC = () => {
   const reveal = useScrollReveal();
+  const { t } = useI18n();
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-brand-green text-white overflow-hidden relative">
@@ -14,29 +23,29 @@ const Sustainability: React.FC = () => {
       <div ref={reveal.ref} className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
           <div>
-            <span className="text-white/60 text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">Sostenibilidad</span>
+            <span className="text-white/60 text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">{t('sustain_eyebrow')}</span>
             <h2 className="text-3xl sm:text-4xl font-serif mb-4 sm:mb-6 leading-tight">
-              Tu evento también puede <br className="hidden sm:block" /><span className="italic text-brand-beige">generar impacto positivo</span>
+              {t('sustain_title')} <br className="hidden sm:block" /><span className="italic text-brand-beige">{t('sustain_title_italic')}</span>
             </h2>
             <p className="text-white/80 text-base sm:text-lg leading-relaxed font-light mb-6 sm:mb-8">
-              Al elegir La Palma & El Tucán, tu empresa apoya un modelo de agricultura regenerativa que cuida el suelo, el agua y las comunidades cafeteras de la región.
+              {t('sustain_desc')}
             </p>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/90 text-sm">
                 <div className="w-2 h-2 rounded-full bg-brand-beige"></div>
-                100% de respaldo energético solar
+                {t('sustain_li_1')}
               </li>
               <li className="flex items-center gap-3 text-white/90 text-sm">
                 <div className="w-2 h-2 rounded-full bg-brand-beige"></div>
-                Programa zero waste con materiales compostables
+                {t('sustain_li_2')}
               </li>
               <li className="flex items-center gap-3 text-white/90 text-sm">
                 <div className="w-2 h-2 rounded-full bg-brand-beige"></div>
-                Iluminación LED inteligente en todas las instalaciones
+                {t('sustain_li_3')}
               </li>
               <li className="flex items-center gap-3 text-white/90 text-sm">
                 <div className="w-2 h-2 rounded-full bg-brand-beige"></div>
-                Green Travel Award Winner
+                {t('sustain_li_4')}
               </li>
             </ul>
           </div>
@@ -45,7 +54,7 @@ const Sustainability: React.FC = () => {
             {SUSTAINABILITY_STATS.map((stat, idx) => (
               <div key={idx} className="bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-white/10 text-center">
                 <span className="text-3xl sm:text-4xl font-serif font-bold text-brand-beige block mb-2">{stat.value}</span>
-                <span className="text-white/60 text-xs uppercase tracking-widest font-bold">{stat.label}</span>
+                <span className="text-white/60 text-xs uppercase tracking-widest font-bold">{t(STAT_LABEL_KEYS[idx])}</span>
               </div>
             ))}
           </div>

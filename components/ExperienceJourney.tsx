@@ -2,18 +2,28 @@
 import React from 'react';
 import { JOURNEY_STEPS } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useI18n, TranslationKey } from '../i18n';
+
+const STEP_KEYS: { titleKey: TranslationKey; descKey: TranslationKey }[] = [
+  { titleKey: 'journey_1_title', descKey: 'journey_1_desc' },
+  { titleKey: 'journey_2_title', descKey: 'journey_2_desc' },
+  { titleKey: 'journey_3_title', descKey: 'journey_3_desc' },
+  { titleKey: 'journey_4_title', descKey: 'journey_4_desc' },
+  { titleKey: 'journey_5_title', descKey: 'journey_5_desc' },
+];
 
 const ExperienceJourney: React.FC = () => {
   const headerReveal = useScrollReveal();
   const stepsReveal = useScrollReveal();
+  const { t } = useI18n();
 
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div ref={headerReveal.ref} className={`text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20 ${headerReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">La Experiencia</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Una experiencia que tu equipo no va a olvidar</h2>
-          <p className="text-neutral-600 font-light text-sm sm:text-base">Cada momento está diseñado para generar conexión, creatividad e impacto.</p>
+          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">{t('journey_eyebrow')}</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">{t('journey_title')}</h2>
+          <p className="text-neutral-600 font-light text-sm sm:text-base">{t('journey_subtitle')}</p>
         </div>
 
         <div ref={stepsReveal.ref} className={`space-y-8 sm:space-y-12 lg:space-y-16 ${stepsReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
@@ -22,7 +32,7 @@ const ExperienceJourney: React.FC = () => {
               <div className={`relative rounded-2xl sm:rounded-[2rem] overflow-hidden aspect-[4/3] ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <img
                   src={step.image}
-                  alt={step.title}
+                  alt={t(STEP_KEYS[idx].titleKey)}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -31,9 +41,9 @@ const ExperienceJourney: React.FC = () => {
                 </div>
               </div>
               <div className={`${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <span className="text-brand-pink font-bold text-[10px] uppercase tracking-widest mb-2 block">Paso {step.number}</span>
-                <h3 className="text-2xl sm:text-3xl font-serif text-brand-dark mb-3 sm:mb-4">{step.title}</h3>
-                <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">{step.description}</p>
+                <span className="text-brand-pink font-bold text-[10px] uppercase tracking-widest mb-2 block">{t('journey_step_label')} {step.number}</span>
+                <h3 className="text-2xl sm:text-3xl font-serif text-brand-dark mb-3 sm:mb-4">{t(STEP_KEYS[idx].titleKey)}</h3>
+                <p className="text-neutral-600 text-sm sm:text-base leading-relaxed font-light">{t(STEP_KEYS[idx].descKey)}</p>
               </div>
             </div>
           ))}
